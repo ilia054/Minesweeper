@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="450.0" minWidth="205.0" spacing="40.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mines.MyController">
+   <children>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="150.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="51.0" minWidth="10.0" prefWidth="51.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.0" minWidth="5.0" prefWidth="37.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="1.0" prefWidth="62.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="69.0" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="146.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="68.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="213.0" minHeight="10.0" prefHeight="138.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="193.0" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <image>
+                  <Image url="@images.jpg" />
+               </image>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ImageView>
+            <Button fx:id="rButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#newGameBoard" prefHeight="25.0" prefWidth="75.0" text="Reset" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Britannic Bold" size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="width" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <TextField fx:id="height" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="BASELINE" />
+            <TextField fx:id="mines" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+            <Label text="Width" textFill="#170d0d" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="44.0" text="Height" GridPane.rowIndex="3">
+               <padding>
+                  <Insets bottom="3.0" left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Mines" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <padding>
+                  <Insets left="5.0" top="3.0" />
+               </padding>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="200.0" GridPane.valignment="TOP">
+               <image>
+                  <Image url="@braude_logo.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="123.0" prefWidth="175.0" translateX="15.0" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <children>
+                  <Circle fx:id="c1" fill="#1090c700" layoutX="63.0" layoutY="95.0" radius="65.0" stroke="#23cee4" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 30;" />
+                  <Circle fx:id="c2" fill="#1090c700" layoutX="65.0" layoutY="93.0" radius="47.0" stroke="#e324a7a1" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 30;" />
+                  <Circle fx:id="c3" fill="#1090c700" layoutX="64.0" layoutY="94.0" radius="26.0" stroke="#24e361c2" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 30;" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </AnchorPane>
+            <Button fx:id="play" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="108.0" text="Spin me!" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <font>
+                  <Font name="Britannic Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets left="5.0" />
+   </padding>
+</HBox>
